@@ -3,6 +3,11 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+
+use App\Models\Group;
+use App\Models\TrainingYear;
+use App\Models\Tutor;
+use Database\Factories\GroupFactory;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -14,11 +19,10 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
-
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
+        // TrainingYear::factory(5)->create();
+        // Tutor::factory()->has(Group::factory()->has(TrainingYear::factory()->count(5))->count(2))->create();
+        TrainingYear::factory(5)->create();
+        Tutor::factory(5)->create();
+        Group::factory(4)->create();
     }
 }
