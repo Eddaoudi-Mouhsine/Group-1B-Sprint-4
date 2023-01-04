@@ -1,18 +1,18 @@
 @extends('layouts.master')
 
 @section('title')
-    Add form
+    Data Tables
 @endsection
 
 @section('css')
 @endsection
 
 @section('title_page1')
-    table data
+    Home
 @endsection
 
 @section('title_page2')
-    Home
+    Data Tables
 @endsection
 
 
