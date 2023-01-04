@@ -63,3 +63,5 @@
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="dist/js/pages/dashboard.js"></script>
 <script src="{{ URL::asset('dist/js/pages/dashboard.js') }}"></script>
+
+@yield('scripts')
