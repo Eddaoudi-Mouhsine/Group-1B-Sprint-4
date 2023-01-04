@@ -20,3 +20,7 @@ Route::get('/', function () {
 Route::get('/tables', function () {
     return view('table');
 });
+
+Route::get('/brief', function () {
+    return view('brief');
+});
