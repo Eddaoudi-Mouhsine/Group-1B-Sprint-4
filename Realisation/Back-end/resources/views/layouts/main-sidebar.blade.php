@@ -47,19 +47,19 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="{{route('brief')}}" class="nav-link active">
+                            <a href="" class="nav-link @if (Route::getCurrentRoute()->uri() == 'brief') active @endif">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Brief</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="./index2.html" class="nav-link">
+                            <a href="{{ route('formateur') }}" class="nav-link @if (Route::getCurrentRoute()->uri() == 'formateur') active @endif">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Formateur</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="./index3.html" class="nav-link">
+                            <a href="./index3.html" class="nav-link ">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Apprenant</p>
                             </a>

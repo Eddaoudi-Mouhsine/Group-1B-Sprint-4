@@ -21,6 +21,10 @@ Route::get('/tables', function () {
     return view('table');
 });
 
-Route::get('/brief', function () {
-    return view('brief');
-});
+// Route::get('/brief', function () {
+//     return view('brief');
+// })->name('brief');
+
+Route::get('/formateur', function () {
+    return view('formateur');
+})->name('formateur');
