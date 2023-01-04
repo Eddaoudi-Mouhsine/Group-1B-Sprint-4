@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\TutorsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,6 +26,16 @@ Route::get('/tables', function () {
 //     return view('brief');
 // })->name('brief');
 
-Route::get('/formateur', function () {
-    return view('formateur');
-})->name('formateur');
+Route::get('/tutor', function () {
+    return view('tutor');
+})->name('tutor');
+
+Route::get('/tutors', [TutorsController::class, 'Get_all_tutors']);
+Route::get('/tutor_byId/{id}', [TutorsController::class, 'Get_tutor_byID']);
+
+
+Route::post('/Insert_tutor', [TutorsController::class, 'insert_tutor'])->name('Insert_tutor');
+Route::post('/tutor/{id}', [TutorsController::class, 'edit_tutor']);
+Route::get('/tutor/{id}', [TutorsController::class, 'delete_tutor']);
+
+

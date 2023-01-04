@@ -53,7 +53,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{ route('formateur') }}" class="nav-link @if (Route::getCurrentRoute()->uri() == 'formateur') active @endif">
+                            <a href="{{ route('tutor') }}" class="nav-link @if (Route::getCurrentRoute()->uri() == 'tutor') active @endif">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Formateur</p>
                             </a>
