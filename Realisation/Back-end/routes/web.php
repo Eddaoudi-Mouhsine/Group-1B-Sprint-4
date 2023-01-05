@@ -34,7 +34,7 @@ Route::get('/tutors', [TutorsController::class, 'Get_all_tutors']);
 Route::get('/tutor_byId/{id}', [TutorsController::class, 'Get_tutor_byID']);
 
 
-Route::post('/Insert_tutor', [TutorsController::class, 'insert_tutor'])->name('Insert_tutor');
+Route::post('/insert_tutor', [TutorsController::class, 'insert_tutor']);
 Route::post('/tutor/{id}', [TutorsController::class, 'edit_tutor']);
 Route::get('/tutor/{id}', [TutorsController::class, 'delete_tutor']);
 

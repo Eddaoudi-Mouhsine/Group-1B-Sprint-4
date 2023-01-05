@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Imports\TutorImport;
+use App\Exports\TutorExport;
+
 use App\Models\Tutor;
 use Illuminate\Http\Request;
 
@@ -29,7 +32,15 @@ class TutorsController extends Controller
         $tutor->email = $req->email;
 
         $tutor->save();
-        return $tutor;
+        return redirect('/tutor');
+    }
+
+    public function import(Request $req){
+        Excel::import(new TutorImport, $req->file);
+    }
+
+    public function export(Request $req){
+        Excel::download(new TutorExport, $req->file);
     }
 
     public function edit_tutor (Request $req, $id) {

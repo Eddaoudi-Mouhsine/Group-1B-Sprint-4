@@ -30,7 +30,8 @@
         </div>
         <!-- /.card-header -->
         <!-- form start -->
-        <form method="POST" action="{{route('Insert_tutor')}}">
+        <form method="POST" action="/insert_tutor">
+            @csrf
             <div class="card-body">
                 <div class="form-group">
                     <label for="lastname">Nom</label>
