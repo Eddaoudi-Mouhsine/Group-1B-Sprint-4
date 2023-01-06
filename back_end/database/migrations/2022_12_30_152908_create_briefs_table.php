@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('description');
             $table->integer('duree');
             $table->bigInteger('formateur_id')->unsigned()->nullable();
-            $table->foreign('formateur_id')->references('id')->on('formateur')->onDelete('set null');
+            $table->foreign('formateur_id')->references('id')->on('formateurs')->onDelete('set null');
             $table->timestamps();
         });
     }

@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->bigInteger('apprenant_id')->unsigned();
             $table->bigInteger('tache_id')->unsigned();
-            $table->foreign('apprenant_id')->references('id')->on('apprenant')->onDelete('cascade');
+            $table->foreign('apprenant_id')->references('id')->on('apprenants')->onDelete('cascade');
             $table->foreign('tache_id')->references('id')->on('taches')->onDelete('cascade');
             $table->boolean('state')->nullable();
             $table->dateTime('dateDebut');

@@ -13,9 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('anneeformation', function (Blueprint $table) {
+        Schema::create('année_formations', function (Blueprint $table) {
             $table->id();
-            $table->string('anneeFormation');
+            $table->string('année_formation');
             $table->timestamps();
         });
     }

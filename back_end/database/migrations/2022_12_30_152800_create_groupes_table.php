@@ -19,8 +19,8 @@ return new class extends Migration
             $table->string('logo');
             $table->bigInteger('anneeformation_id')->unsigned();
             $table->bigInteger('formateur_id')->unsigned();
-            $table->foreign('anneeformation_id')->references('id')->on('anneeformation')->onUpdate('cascade');
-            $table->foreign('formateur_id')->references('id')->on('formateur');
+            $table->foreign('anneeformation_id')->references('id')->on('année_formations')->onUpdate('cascade');
+            $table->foreign('formateur_id')->references('id')->on('formateurs');
             $table->timestamps();
         });
     }
