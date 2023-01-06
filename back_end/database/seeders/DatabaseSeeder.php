@@ -35,7 +35,7 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
 
-        traningYear::factory(6)->create();
+        traningYear::factory(2)->create();
         Apprenant::factory(20)->create();
         Formateur::factory(2)->create();
         Brief::factory(6)->create();
