@@ -23,6 +23,6 @@ class Groupe extends Model
     }
     public function formateur()
     {
-        return $this->hasMany(Formateur::class);
+        return $this->belongsTo(Formateur::class);
     }
 }

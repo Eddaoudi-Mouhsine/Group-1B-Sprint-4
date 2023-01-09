@@ -19,4 +19,5 @@ Route::get('/', function () {
 });
 
 Route::get('/groupe', [GroupeController::class, 'index'])->name('groupe');
+Route::get('/addGroupe', [GroupeController::class, 'insert_page'])->name('AddGroupe');
 
