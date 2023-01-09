@@ -18,7 +18,7 @@ class briefsFactory extends Factory
      */
     public function definition()
     {
-        $formateur = Formateur::all()->pluck("id")->toArray();
+        $formateur = App\Models\Formateur::all()->pluck("id")->toArray();
 
         return [
             "name" => $this->faker->name(),

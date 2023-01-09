@@ -12,6 +12,14 @@ class AnnéeFormation extends Model
 
     public function groupe()
     {
-        return $this->belongsTo(Groupe::class);
+        return $this->hasMany(Groupe::class, 'id', 'anneeformation_id');
     }
 }
+
+
+
+
+
+
+
+

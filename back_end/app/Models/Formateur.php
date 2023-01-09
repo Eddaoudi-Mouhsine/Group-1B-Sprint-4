@@ -4,6 +4,9 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Brief;
+use App\Models\Groupe;
+
 
 class Formateur extends Model
 {
@@ -12,5 +15,9 @@ class Formateur extends Model
     public function brief()
     {
         return $this->hasMany(Brief::class);
+    }
+    public function groupe()
+    {
+        return $this->hasMany(Groupe::class);
     }
 }

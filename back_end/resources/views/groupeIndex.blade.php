@@ -5,11 +5,11 @@
 @endsection
 
 @section('name_page')
-    home
+    Groupes
 @endsection
 
 @section('title-1')
-    home
+    groupe
 @endsection
 
 @section('title-2')
@@ -17,6 +17,11 @@
 @endsection
 
 @section('content')
+
+    @foreach ($select_groupe as $groupe)
+        <h1>{{ $groupe->name }}</h1>
+        <h1>{{ $groupe->anneeFormation->année_formation }}</h1>
+    @endforeach
 
 @endsection
 
