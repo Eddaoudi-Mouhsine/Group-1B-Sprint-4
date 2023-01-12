@@ -19,7 +19,7 @@
 @section('content')
 <form method="POST" action="{{ Route('edit_groupe', $groupe->id) }}" enctype="multipart/form-data">
     @csrf
-    @put
+    @method('PUT')
     <div class="card-body">
       <div class="form-group">
         <label for="exampleInputEmail1">Edit Groupe</label>

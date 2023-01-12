@@ -26,7 +26,7 @@
 
                 <!-- /.card-header -->
                 <div class="card-body">
-                    <div><a href="{{ route('AddGroupe') }}"><button>Add Groupe</button></a></div>
+                    <div><a href="{{ route('AddGroupe') }}"><button class="btn btn-primary">Add Groupe</button></a></div>
                   <table id="example2" class="table table-bordered table-hover">
                     <thead>
                     <tr>
@@ -45,10 +45,14 @@
                         <td>{{ $groupe->formateur->nom }} {{ $groupe->formateur->prenom }}</td>
                         <td>{{ $groupe->anneeFormation->année_formation }}</td>
                         <td>
-                            <a href="{{ Route('get_groupe', $groupe->id) }}"><button>Edit</button></a>
-                            <form method="DELETE" action="">
-                               <a href="{{ Route('delete_groupe' , $groupe->id) }}"><button>Delete</button></a>
-                            </form>
+                            <div style="display: flex; justify-content: center;">
+                                <a href="{{ Route('get_groupe', $groupe->id) }}"><i class="fas fa-edit"></i></a>
+                                <form method="POST" action="{{ Route('delete_groupe' , $groupe->id) }}">
+                                    @csrf
+                                    @method('DELETE')
+                                <button type="submit" style="border: none; background-color: none; background: none; color: red; margin-left: 20px"><i class="fas fa-trash"></i></button>
+                                </form>
+                            </div>
                         </td>
                         </tr>
                     @endforeach

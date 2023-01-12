@@ -45,7 +45,7 @@ class GroupeController extends Controller
         $insert_groupe->formateur_id = $request->formateur;
         $insert_groupe->logo = $fille_name;
         $insert_groupe->save();
-        // return redirect('/groupe');
+        return redirect('/groupe');
         // dd($insert_groupe);
     }
 
