@@ -181,6 +181,9 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
+        Maatwebsite\Excel\ExcelServiceProvider::class,
+
+
 
         /*
          * Package Service Providers...
@@ -196,6 +199,10 @@ return [
         App\Providers\RouteServiceProvider::class,
 
     ],
+    
+    'aliases' => [
+        'Excel' => Maatwebsite\Excel\Facades\Excel::class,
+      ],
 
     /*
     |--------------------------------------------------------------------------
