@@ -17,36 +17,37 @@
 @endsection
 
 @section('content')
-<form method="POST" action="{{ route('insert_Groupe') }}" enctype="multipart/form-data">
+<form method="POST" action="{{ Route('edit_groupe', $groupe->id) }}" enctype="multipart/form-data">
     @csrf
+    @put
     <div class="card-body">
       <div class="form-group">
-        <label for="exampleInputEmail1">Name Groupe</label>
-        <input type="text" class="form-control" name="name" id="exampleInputEmail1" placeholder="Name Groupe">
+        <label for="exampleInputEmail1">Edit Groupe</label>
+        <input type="text" class="form-control" name="name" value="{{ $groupe->name }}" id="exampleInputEmail1" placeholder="Name Groupe">
       </div>
       <div class="form-group">
-        <label for="exampleInputPassword1">Select Année de Formation</label>
+        <label for="exampleInputPassword1">Edit Année de Formation</label>
         <select class="form-control" name="aneeformation">
             @foreach ($select_annéeformation as $annee)
-                    <option  hidden>Select Année de Formation</option>
-                    <option value={{ $annee->id }}>{{ $annee->année_formation }}</option>
+                    <option hidden>Edit Année de Formation</option>
+                    <option selected value={{ $annee->id }}>{{ $annee->année_formation }}</option>
 
             @endforeach
         </select>
       </div>
       <div class="form-group">
-        <label for="exampleInputPassword1">Select Formateur</label>
+        <label for="exampleInputPassword1">Edit Formateur</label>
         <select class="form-control" name="formateur" id="">
             @foreach ($select_formateur as $formateur)
-                <option hidden>Select Formateur</option>
-                <option
+                <option hidden>Edit Formateur</option>
+                <option selected
                  value="{{ $formateur->id }}">{{ $formateur->nom }} {{ $formateur->prenom }}</option>
             @endforeach
 
         </select>
       </div>
       <div class="form-group">
-        <label for="exampleInputFile">Choose Logo</label>
+        <label for="exampleInputFile">Edit Logo</label>
         <div class="input-group">
           <div class="custom-file">
             <input type="file"  name="image" class="custom-file-input" id="exampleInputFile">
@@ -58,7 +59,7 @@
     <!-- /.card-body -->
 
     <div class="card-footer">
-      <button type="submit" class="btn btn-primary">Submit</button>
+      <button type="submit" class="btn btn-primary">Update</button>
     </div>
   </form>
 @endsection

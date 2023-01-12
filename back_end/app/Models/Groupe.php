@@ -11,6 +11,9 @@ use App\Models\Formateur;
 class Groupe extends Model
 {
     use HasFactory;
+    protected $fillable = [
+        'name'
+    ];
 
     public function anneeFormation()
     {
