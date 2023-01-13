@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GroupeController;
+use App\Http\Controllers\apprenantController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,6 +19,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+//groupes
 Route::get('/groupe', [GroupeController::class, 'index'])->name('groupe');
 Route::get('/addGroupe', [GroupeController::class, 'insert_page'])->name('AddGroupe');
 Route::post('/insert_Groupe', [GroupeController::class, 'insert'])->name('insert_Groupe');
@@ -26,6 +28,10 @@ Route::delete('/groupe/delete/{id}', [GroupeController::class, 'delete'])->name(
 Route::put('/groupe/edit/{id}', [GroupeController::class, 'edit'])->name('edit_groupe');
 
 
-
 Route::get('/export-Groupes', [GroupeController::class, 'exportGroupes'])->name('export_groupes');
+
+//apprenants
+Route::get('/Apprenants', [apprenantController::class, 'index'])->name('apprenant');
+Route::get('/export-apprenants', [apprenantController::class, 'exportApprenant'])->name('export_apprenants');
+Route::post('/import-apprenants', [apprenantController::class, 'importApprenant'])->name('import_apprenants');
 

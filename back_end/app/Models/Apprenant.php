@@ -9,6 +9,14 @@ use App\Models\Brief;
 
 class Apprenant extends Model
 {
+    protected $fillable = [
+        'nom',
+        'prenom',
+        'email',
+        'tele',
+        'address',
+        'imageURL'
+    ];
     use HasFactory;
 
     public function task()

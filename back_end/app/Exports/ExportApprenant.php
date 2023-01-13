@@ -2,17 +2,16 @@
 
 namespace App\Exports;
 
-use App\Models\Groupe;
+use App\Models\Apprenant;
 use Maatwebsite\Excel\Concerns\FromCollection;
 
-class ExportGroupe implements FromCollection
+class ExportApprenant implements FromCollection
 {
     /**
     * @return \Illuminate\Support\Collection
     */
-
     public function collection()
     {
-        return Groupe::select('name','anneeformation_id','formateur_id')->get();
+        return Apprenant::select('nom', 'prenom', 'email', 'tele', 'address', 'imageURL')->get();
     }
 }
