@@ -18,6 +18,7 @@ class apprenantController extends Controller
         return view('apprenant', compact('apprenant'));
     }
 
+
     public function exportApprenant(Request $request)
     {
         return Excel::download(new ExportApprenant, 'apprenant.xlsx');
