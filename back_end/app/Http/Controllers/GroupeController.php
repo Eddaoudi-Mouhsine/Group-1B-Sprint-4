@@ -7,6 +7,8 @@ use App\Models\Groupe;
 use App\Models\Formateur;
 use App\Models\AnnéeFormation;
 use Illuminate\Support\Facades\Storage;
+use Maatwebsite\Excel\Facades\Excel;
+use App\Exports\ExportGroupe;
 // use App\Models\AnnéeFormation;
 class GroupeController extends Controller
 {
@@ -81,5 +83,10 @@ class GroupeController extends Controller
 
         $edit_groupe->save();
         return redirect('/groupe');
+    }
+
+    public function exportGroupes(Request $request)
+    {
+        return Excel::download(new ExportGroupe, 'groupes.xlsx');
     }
 }

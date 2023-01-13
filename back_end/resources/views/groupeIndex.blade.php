@@ -59,6 +59,7 @@
                     </tbody>
                   </table>
                 </div>
+                <a href="{{ route('export_groupes') }}"><button>Export Groupes</button></a>
                 <!-- /.card-body -->
               </div>
               <!-- /.card -->

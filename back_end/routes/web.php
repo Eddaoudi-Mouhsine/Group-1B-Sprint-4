@@ -25,3 +25,7 @@ Route::get('/groupe/{id}', [GroupeController::class, 'get_groupe'])->name('get_g
 Route::delete('/groupe/delete/{id}', [GroupeController::class, 'delete'])->name('delete_groupe');
 Route::put('/groupe/edit/{id}', [GroupeController::class, 'edit'])->name('edit_groupe');
 
+
+
+Route::get('/export-Groupes', [GroupeController::class, 'exportGroupes'])->name('export_groupes');
+
