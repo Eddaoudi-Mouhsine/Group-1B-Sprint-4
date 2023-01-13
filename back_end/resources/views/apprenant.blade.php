@@ -99,6 +99,9 @@
                     </div>
                     </div>
                 </div>
+                <div class="d-flex justify-content-center width-">
+                    {{ $apprenant->links('myPaginate') }}
+                </div>
 
             </div>
             {{-- <a href="{{ route('export_apprenants') }}"><button>Import Groupes</button></a> --}}

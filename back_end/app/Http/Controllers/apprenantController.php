@@ -14,7 +14,7 @@ class apprenantController extends Controller
 {
     public function index()
     {
-        $apprenant = Apprenant::all();
+        $apprenant = Apprenant::paginate(25);
         return view('apprenant', compact('apprenant'));
     }
 
